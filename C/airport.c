@@ -180,6 +180,7 @@ double getEstimatedTravelTime(const Airport* stops, int size, double aveKmsPerHo
    
     double travelTime = 0;
     double airDistance;
+    // iterate from first to second to last stop has no layover time
     for (int i = 0; i < size - 1; i++) {
         // get air distance form current stop to next stop, if error return -1
         airDistance = getAirDistance(&stops[i], &stops[i + 1]);
