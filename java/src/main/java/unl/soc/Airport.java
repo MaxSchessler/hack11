@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * The Airport class represents an airport with various attributes such as GPS ID, name, location, type, elevation, city, and country.
  * It provides methods to compute the air distance between two airports and to estimate travel time for a flight with multiple stops.
- * 
  * Attributes:
  * - gspId: The GPS ID of the airport.
  * - type: The type of the airport.

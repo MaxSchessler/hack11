@@ -26,9 +26,9 @@ public class AirportTester {
 
         //Testing toString method
         System.out.println("\nMy Airports: ");
-        System.out.println(a1.toString());
-        System.out.println(a2.toString());
-        System.out.println(a3.toString());
+        System.out.println(a1);
+        System.out.println(a2);
+        System.out.println(a3);
 
         //Testing getAirDistance method
         System.out.println("\nAir Distances: ");
