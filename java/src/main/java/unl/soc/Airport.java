@@ -47,8 +47,8 @@ public class Airport {
 	 * @param city the city where the airport is located
 	 * @param country the country where the airport is located
 	 */
-	public Airport(String gpsId, String type, String name, double latitude, double longitude,
-		double elevationFeet, String city, String country) {
+	public Airport(String gpsId, String name, double latitude, double longitude, String type, int elevationFeet,
+				   String city, String country) {
 		
 		this.gspId = gpsId;
 		this.name = name;
@@ -212,8 +212,8 @@ public class Airport {
 	 */
 	@Override
 	public String toString() {
-		return gspId + " " + type + " " + name + " " + latitude + " " 
-		+ longitude + " " + elevationFeet + " " + city +  " " + country;
+		return String.format("%s %s %s %f %f %f %s %s",
+				gspId, type, name, latitude, longitude, elevationFeet, city, country);
 	}
 
 }
