@@ -48,8 +48,8 @@ public class Airport {
 	 * @param city the city where the airport is located
 	 * @param country the country where the airport is located
 	 */
-	public Airport(String gpsId, String name, double latitude, double longitude, 
-	String type, int elevationFeet,String city, String country) {
+	public Airport(String gpsId, String type, String name, double latitude, double longitude,
+		double elevationFeet, String city, String country) {
 		
 		this.gspId = gpsId;
 		this.name = name;
@@ -75,7 +75,7 @@ public class Airport {
 		double lon1 = this.longitude;
 		double lat2 = destination.latitude;
 		double lon2 = destination.longitude;
-		final double RADIUS = 6371.01; // Earth's radius in kilometers
+		final double RADIUS = 6371; // Earth's radius in kilometers
 
 		if (lat1 < -90 || lat1 > 90) 
         {
@@ -104,7 +104,6 @@ public class Airport {
 		lat2 = Math.toRadians(lat2);
 		lon2 = Math.toRadians(lon2);
 	
-        // Return the airdistance using the Spherical Law of Cosines
         return Math.acos(( Math.sin(lat1) * Math.sin(lat2)) + (Math.cos(lat1) * Math.cos(lat2) * Math.cos(lon2-lon1))) * RADIUS;
 	}
 
